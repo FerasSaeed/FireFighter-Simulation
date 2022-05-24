@@ -9,6 +9,8 @@ public class Route {
 	String route;
 	double length;
 
+	public Route(SubStreet start, SubStreet end) {makeRoute(start, end);}
+
 	// we use these so we can generate 100 routes and determine the optimal route
 	public ArrayList<SubStreet> allRoutes = new ArrayList<>();
 
