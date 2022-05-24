@@ -19,7 +19,7 @@ public class City {
         // Loop1: for i from 1 to a random number (max is 20) generate incidents objects
         // that are saved in ArrayList<Incident> incidents
 		int random = (int)(Math.random() * 20);
-        	for (int i = 0; i < 20; i++) {
+        	for (int i = 0; i < random; i++) {
            		incidents.add(new Incident(subStreets));
         	}
         /*
@@ -40,10 +40,8 @@ public class City {
             		}
         	}
 		/*
-		 * Loop2: make route object to decide which station location (a substreet
-		 * fireStationsLocations arraylist) is closest to incident
-		 * 
-		 * also in Loop 2: create needed fire trucks and trapped trucks for each
+		 
+		 *  in Loop 2: create needed fire trucks and trapped trucks for each
 		 * incident, save them in arraylist
 		 */
 		// Loop3: make tables for displaying information, based on steps of 5 minutes
