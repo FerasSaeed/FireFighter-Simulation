@@ -68,6 +68,8 @@ public class Incident implements FireReport{
         return trappedVictims;
     }
 
+    public Clock getTimeOfFire(){return timeOfFire;}
+
     //get whether the victim/victims of incident is trapped
     public boolean getHasTrapped()
     {
