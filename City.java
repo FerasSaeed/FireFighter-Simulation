@@ -14,16 +14,30 @@ public class City {
 
 	public static void main(String[] args) {
 
-		// generate map for the city, save all substreets in the arraylist above
+		   // generate map for the city, save all subStreets in the arraylist above
 
-		// Loop1: for i from 1 to a random number (max is 20) generate incidents objects
-		// that are saved in ArrayList<Incident> incidents
-
-		/*
-		 * Generate 3 fire stations substreets randomly, choose 3 "uniqe" SubStreets
-		 * from the subStreets arraylist above which means a random number for an index,
-		 * that DOES NOT get repeated!
-		 */
+        // Loop1: for i from 1 to a random number (max is 20) generate incidents objects
+        // that are saved in ArrayList<Incident> incidents
+        	for (int i = 0; i < 20; i++) {
+           		incidents.add(new Incident(subStreets));
+        	}
+        /*
+         * Generate 3 fire stations subStreets randomly, choose 3 "unique" SubStreets
+         * from the subStreets arraylist above which means a random number for an index,
+         * that DOES NOT get repeated!
+         */
+        	ArrayList<SubStreet> V = subStreets;
+        	int i = 0;
+        	while (i < 3)
+       	 	{
+            		int M = (int)(Math.random() * 3);
+            		if (V.get(M) != null)
+            		{
+               		fireStationsLocations.add(V.get(M));
+                	V.remove(M);
+                	i++;
+            		}
+        	}
 		/*
 		 * Loop2: make route object to decide which station location (a substreet
 		 * fireStationsLocations arraylist) is closest to incident
