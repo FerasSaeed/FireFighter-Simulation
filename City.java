@@ -18,6 +18,7 @@ public class City {
 
         // Loop1: for i from 1 to a random number (max is 20) generate incidents objects
         // that are saved in ArrayList<Incident> incidents
+		int random = (int)(Math.random() * 20);
         	for (int i = 0; i < 20; i++) {
            		incidents.add(new Incident(subStreets));
         	}
@@ -30,7 +31,7 @@ public class City {
         	int i = 0;
         	while (i < 3)
        	 	{
-            		int M = (int)(Math.random() * 3);
+           		int M = (int)(Math.random() * subStreets.size());
             		if (V.get(M) != null)
             		{
                		fireStationsLocations.add(V.get(M));
