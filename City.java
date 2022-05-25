@@ -117,7 +117,7 @@ public class City {
                 subStreets.get(12).getAdjSub().addAll(Arrays.asList(subStreets.get(11),subStreets.get(24),subStreets.get(19) ));
                 subStreets.get(13).getAdjSub().addAll(Arrays.asList(subStreets.get(0),subStreets.get(6),subStreets.get(10),subStreets.get(14) ));
                 subStreets.get(14).getAdjSub().addAll(Arrays.asList(subStreets.get(10),subStreets.get(13),subStreets.get(11) ));
-                subStreets.get(15).getAdjSub().addAll(Arrays.asList(subStreets.get(3),subStreets.get(13),subStreets.get(32),subStreets.get(33) ));
+                subStreets.get(15).getAdjSub().addAll(Arrays.asList(subStreets.get(3),subStreets.get(4),subStreets.get(32),subStreets.get(33) ));
                 subStreets.get(16).getAdjSub().addAll(Arrays.asList(subStreets.get(9),subStreets.get(17),subStreets.get(34) ));
                 subStreets.get(17).getAdjSub().addAll(Arrays.asList(subStreets.get(16),subStreets.get(18),subStreets.get(34),subStreets.get(37) ));
                 subStreets.get(18).getAdjSub().addAll(Arrays.asList(subStreets.get(19),subStreets.get(17),subStreets.get(9),subStreets.get(37) ));
