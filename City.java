@@ -99,7 +99,48 @@ public class City {
 		{
 			subStreets.add(new SubStreet(roadName[i],
 					SubRoadName[i], roadLength[i]));
+			
 		}
+		
+		subStreets.get(0).getAdjSub().addAll(Arrays.asList(subStreets.get(1),subStreets.get(13),subStreets.get(6) ));
+                subStreets.get(1).getAdjSub().addAll(Arrays.asList(subStreets.get(0),subStreets.get(2),subStreets.get(28) ));
+                subStreets.get(2).getAdjSub().addAll(Arrays.asList(subStreets.get(1),subStreets.get(3),subStreets.get(25),subStreets.get(28) ));
+                subStreets.get(3).getAdjSub().addAll(Arrays.asList(subStreets.get(2),subStreets.get(4),subStreets.get(15),subStreets.get(25) ));
+                subStreets.get(4).getAdjSub().addAll(Arrays.asList(subStreets.get(3),subStreets.get(5),subStreets.get(15),subStreets.get(20) ));
+                subStreets.get(5).getAdjSub().addAll(Arrays.asList(subStreets.get(4),subStreets.get(16),subStreets.get(20) ));
+                subStreets.get(6).getAdjSub().addAll(Arrays.asList(subStreets.get(0),subStreets.get(7),subStreets.get(13),subStreets.get(30) ));
+                subStreets.get(7).getAdjSub().addAll(Arrays.asList(subStreets.get(6),subStreets.get(8),subStreets.get(27),subStreets.get(30) ));
+                subStreets.get(8).getAdjSub().addAll(Arrays.asList(subStreets.get(7),subStreets.get(9),subStreets.get(27),subStreets.get(23),subStreets.get(22) ));
+                subStreets.get(9).getAdjSub().addAll(Arrays.asList(subStreets.get(8),subStreets.get(18),subStreets.get(19),subStreets.get(22),subStreets.get(23) ));
+                subStreets.get(10).getAdjSub().addAll(Arrays.asList(subStreets.get(13),subStreets.get(14),subStreets.get(23),subStreets.get(24) ));
+                subStreets.get(11).getAdjSub().addAll(Arrays.asList(subStreets.get(14),subStreets.get(24),subStreets.get(12) ));
+                subStreets.get(12).getAdjSub().addAll(Arrays.asList(subStreets.get(11),subStreets.get(24),subStreets.get(19) ));
+                subStreets.get(13).getAdjSub().addAll(Arrays.asList(subStreets.get(0),subStreets.get(6),subStreets.get(10),subStreets.get(14) ));
+                subStreets.get(14).getAdjSub().addAll(Arrays.asList(subStreets.get(10),subStreets.get(13),subStreets.get(11) ));
+                subStreets.get(15).getAdjSub().addAll(Arrays.asList(subStreets.get(3),subStreets.get(13),subStreets.get(32),subStreets.get(33) ));
+                subStreets.get(16).getAdjSub().addAll(Arrays.asList(subStreets.get(9),subStreets.get(17),subStreets.get(34) ));
+                subStreets.get(17).getAdjSub().addAll(Arrays.asList(subStreets.get(16),subStreets.get(18),subStreets.get(34),subStreets.get(37) ));
+                subStreets.get(18).getAdjSub().addAll(Arrays.asList(subStreets.get(19),subStreets.get(17),subStreets.get(9),subStreets.get(37) ));
+                subStreets.get(19).getAdjSub().addAll(Arrays.asList(subStreets.get(18),subStreets.get(9),subStreets.get(12) ));
+                subStreets.get(20).getAdjSub().addAll(Arrays.asList(subStreets.get(4),subStreets.get(5),subStreets.get(33),subStreets.get(34),subStreets.get(21) ));
+                subStreets.get(21).getAdjSub().addAll(Arrays.asList(subStreets.get(20),subStreets.get(33),subStreets.get(34),subStreets.get(22),subStreets.get(36),subStreets.get(37) ));
+                subStreets.get(22).getAdjSub().addAll(Arrays.asList(subStreets.get(21),subStreets.get(23),subStreets.get(36),subStreets.get(37),subStreets.get(8),subStreets.get(9) ));
+                subStreets.get(23).getAdjSub().addAll(Arrays.asList(subStreets.get(22),subStreets.get(24),subStreets.get(8),subStreets.get(9),subStreets.get(10) ));
+                subStreets.get(24).getAdjSub().addAll(Arrays.asList(subStreets.get(23),subStreets.get(10),subStreets.get(11),subStreets.get(12) ));
+                subStreets.get(25).getAdjSub().addAll(Arrays.asList(subStreets.get(2),subStreets.get(3),subStreets.get(26),subStreets.get(31),subStreets.get(32) ));
+                subStreets.get(26).getAdjSub().addAll(Arrays.asList(subStreets.get(25),subStreets.get(27),subStreets.get(31),subStreets.get(32),subStreets.get(35),subStreets.get(36) ));
+                subStreets.get(27).getAdjSub().addAll(Arrays.asList(subStreets.get(26),subStreets.get(35),subStreets.get(36),subStreets.get(7),subStreets.get(8) ));
+                subStreets.get(28).getAdjSub().addAll(Arrays.asList(subStreets.get(1),subStreets.get(2),subStreets.get(29),subStreets.get(31) ));
+                subStreets.get(29).getAdjSub().addAll(Arrays.asList(subStreets.get(28),subStreets.get(30),subStreets.get(31),subStreets.get(35) ));
+                subStreets.get(30).getAdjSub().addAll(Arrays.asList(subStreets.get(6),subStreets.get(7),subStreets.get(29),subStreets.get(35) ));
+                subStreets.get(31).getAdjSub().addAll(Arrays.asList(subStreets.get(25),subStreets.get(26),subStreets.get(28),subStreets.get(29),subStreets.get(32) ));
+                subStreets.get(32).getAdjSub().addAll(Arrays.asList(subStreets.get(31),subStreets.get(33),subStreets.get(25),subStreets.get(26),subStreets.get(15) ));
+                subStreets.get(33).getAdjSub().addAll(Arrays.asList(subStreets.get(32),subStreets.get(34),subStreets.get(15),subStreets.get(20),subStreets.get(21) ));
+                subStreets.get(34).getAdjSub().addAll(Arrays.asList(subStreets.get(16),subStreets.get(17),subStreets.get(33),subStreets.get(20),subStreets.get(21) ));
+                subStreets.get(35).getAdjSub().addAll(Arrays.asList(subStreets.get(29),subStreets.get(30),subStreets.get(36),subStreets.get(26),subStreets.get(27) ));
+                subStreets.get(36).getAdjSub().addAll(Arrays.asList(subStreets.get(35),subStreets.get(37),subStreets.get(26),subStreets.get(27),subStreets.get(21),subStreets.get(22) ));
+                subStreets.get(37).getAdjSub().addAll(Arrays.asList(subStreets.get(36),subStreets.get(21),subStreets.get(22),subStreets.get(17),subStreets.get(18) ));
+
 
         // Loop1: for i from 1 to a random number (max is 20) generate incidents objects
         // that are saved in ArrayList<Incident> incidents
