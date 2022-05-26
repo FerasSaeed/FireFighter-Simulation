@@ -1,45 +1,51 @@
 package clock;
 
+package clock;
+
+import Clock.SubStreet;
+
 public class FireTruck extends FireStationTruck {
 
 
 	private double extinguishingDuration; // Extinguishing duration of the fire
 
 	
-// Constructor takes information from the incident
 	
-	public FireTruck(Incident incident, SubStreet location, Route route) {		
-		//here generate route between incident and fire truck location
-			route.makeRoute(location, incident.getLocation());
+// Constructor takes information from the incident
+	public FireTruck(Incident incident, Route route) {		
 		//based on it make arrival time
 			setArrivalTime(route, incident);
 		//here we pass fire type, look into Incident class to see the types, based on it decide the duration, pass it to get the mission end time
-			getMissionEndTime(getArrivalTime(), setExtinguishingDuration(incident.getFireType()));
+			setMissionEndTime(getArrivalTime(), getExtinguishingDuration(incident.getFireType()));
 		
 	}
 	
 
-	
 	
 	
 // set the arrivalTime to the incident location.
 	public void setArrivalTime(Route route, Incident incident) {
 		
-		//** from route.getLength(), you get the distance to incident location, calculate the duration, change from minute to hours and minute
-		//then add it to departureTime, look at getMissionEndTime() method for more
+		/* from route.getLength(), you get the distance to incident location, calculate the duration, change from minute To hours and minute
+		then add it to departureTime.*/
 		
-		arrivalTime= route.getLength();
-		arrivalTime= new Clock(arrivalTime.getHour(), arrivalTime.getMinute());
-		departureTime = incident.getTimeOfFire();
-		departureTime= new Clock(TimeOfFire.getHour(), TimeOfFire.getMinute());
-		departureTime.addTime(0, 2);
+		departureTime= new Clock(incident.getTimeOfFire.getHour(), incident.getTimeOfFire.getMinute()); //convert to (hh:mm)
+		departureTime.addTime(0, 2); //add 2 minutes
+		int velocity= 80/60; // convert the truck speed from hours -> minutes.
+		double timeToIncident= route.getLength() / velocity;
 		
+		int hours = (int) (timeToIncident / 60); 
+		int minutes = (int) (timeToIncident % 60);  
+	
+	//change the departure time to (hh:mm) then add it to timeToIncident.	
+		arrivalTime= new Clock(departureTime.getHour(), departureTime.getMinute());
+		arrivalTime.addTime(hours, minutes);		
 	}
 	
 	
 
 // calculate Extinguishing time.
-	public double setExtinguishingDuration(String truckType) {
+	public double getExtinguishingDuration(String truckType) {
 		
 		// generate random numbers in each case.
 		if(truckType.contains("Flammable Gasses"))
@@ -60,28 +66,32 @@ public class FireTruck extends FireStationTruck {
 
 
 // compute the arrivalTime + extinguishingDuration
-	public Clock getMissionEndTime(Clock arrivalTime, double extinguishingDuration) {
+	public void setMissionEndTime(Clock arrivalTime, double extinguishingDuration) {
 	
 	//**the  extinguishingDuration is in minute, turn it to hours and minutes and use the method bellow
-	//**for example 65 minuts is 1 hour and 5 minutes
+	//**for example 65 minutes is 1 hour and 5 minutes
 		
-		int hours = (int) (this.extinguishingDuration / 60); //since both are ints, you get an int
+		int hours = (int) (this.extinguishingDuration / 60); 
 		int minutes = (int) (this.extinguishingDuration % 60);  
 		
 	//change the arrival time to (hh:mm) then add it to extinguish time.
 		 missionEndTime = new Clock(arrivalTime.getHour(), arrivalTime.getMinute());
 		 missionEndTime.addTime(hours, minutes);		 
 		
-		 return missionEndTime;
 	}
+	
+	
 
+	// get the total time of the mission.
+		public Clock getMissionEndTime() {
+			return missionEndTime;
+	}
 	
 	
-	
-// get the arrivalTime to the incident location.
-	public Clock getArrivalTime() { 
-		return arrivalTime;
-}
+	// get the arrivalTime to the incident location.
+		public Clock getArrivalTime() { 
+			return arrivalTime;
+		}
 	
 	
 	
@@ -113,3 +123,4 @@ public class FireTruck extends FireStationTruck {
 	}
 
 }
+
