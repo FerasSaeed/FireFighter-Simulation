@@ -165,11 +165,29 @@ public class City {
                 	i++;
             		}
         	}
-		/*
+		
 		 
-		 *  in Loop 2: create needed fire trucks and trapped trucks for each
-		 * incident, save them in arraylist
-		 */
+	/*  in Loop 2: create needed fire trucks and trapped trucks for each
+	  incident, save them in arraylist  */
+		Random rand = new Random();
+		int randomIndex= rand.nextInt(fireStationsLocations.size()); // random index between 0 & array size.
+	
+		for(int i=0; i < incidents.size() ; i++)
+			if(incidents.get(i).getHasTrapped() ) {
+
+				fireStationsTrucks.add(new TrappedTruck(incidents.get(i), new Route(fireStationsLocations.get(randomIndex), incidents.get(i).getLocation())));
+				fireStationsTrucks.add(new FireTruck(incidents.get(i), new Route(fireStationsLocations.get(randomIndex), incidents.get(i).getLocation())));
+			}
+			else
+				fireStationsTrucks.add(new FireTruck(incidents.get(i), new Route(fireStationsLocations.get(i), incidents.get(i).getLocation())));
+
+			
+			
+			
+		
+		
+		
+		
 		// Loop3: make tables for displaying information, based on steps of 5 minutes
 	}
 }
