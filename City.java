@@ -168,7 +168,7 @@ public class City {
 		
 		 
 	/*  in Loop 2: create needed fire trucks and trapped trucks for each
-	  incident, save them in arraylist  */
+	  incident, save them in fireStationsTrucks arraylist  */
 		Random rand = new Random();
 		int randomIndex= rand.nextInt(fireStationsLocations.size()); // random index between 0 & array size.
 	
