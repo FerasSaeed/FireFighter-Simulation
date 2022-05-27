@@ -179,7 +179,7 @@ public class City {
 				fireStationsTrucks.add(new FireTruck(incidents.get(i), new Route(fireStationsLocations.get(randomIndex), incidents.get(i).getLocation())));
 			}
 			else
-				fireStationsTrucks.add(new FireTruck(incidents.get(i), new Route(fireStationsLocations.get(i), incidents.get(i).getLocation())));
+				fireStationsTrucks.add(new FireTruck(incidents.get(i), new Route(fireStationsLocations.get(randomIndex), incidents.get(i).getLocation())));
 
 			
 			
