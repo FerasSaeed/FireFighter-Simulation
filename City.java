@@ -14,6 +14,7 @@ public class City {
 
 	public static void main(String[] args) {
 //
+		//
 		   // generate map for the city, save all subStreets in the arraylist above
 			String roadName[] = {"Madina road"
 					,"Madina road"
