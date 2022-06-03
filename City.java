@@ -169,6 +169,15 @@ public class City {
         	for (int i = 0; i < random; i++) {
            		incidents.add(new Incident(subStreets));
         	}
+		
+	//to print the table of incidents
+		System.out.println("Number of Incident" + "\t" +"Time of Fire \t" + "Main street\t\t" + "Sub Street\t\t" + "Fire type\t" + "Has trapped?\t"
+				+ "Trapped number");
+		//get each report for incidents
+		for (Incident inc : incidents) {
+			System.out.println(inc.getAFullReport());
+
+		}
         /*
          * Generate 3 fire stations subStreets randomly, choose 3 "unique" SubStreets
          * from the subStreets arraylist above which means a random number for an index,
