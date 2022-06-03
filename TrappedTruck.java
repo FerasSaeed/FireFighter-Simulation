@@ -99,6 +99,60 @@ public class TrappedTruck extends FireStationTruck {
 		missionEndTime.addTime(hours, minutes);
 
 	}
+public void currentReport(int step) {
+//what the truck is doing now
+		String currentAct = "";
+		// until the the mission is finished, keep printing the report
+		if (!finished) {
+			// if less than 2 minutes after fire time, truck crew still preparing
+			if (step < 2) {
+				currentAct = "Preparing";
+			}
+			// if more than 2 minutes after fire time, and less than the trip time, truck is
+			// still on the way
+
+			if (step > 2 && step < timeToIncident) {
+				currentAct = "On the way";
+			}
+			// if step is bigger than trip duration but smaller than mission end duration,
+			// they are still putting down fire
+			if (step > timeToIncident && step < (extinguishingDuration + timeToIncident)) {
+				currentAct = "Putting down fire";
+			} // if step is bigger than mission duration, mission accomplished
+			if (step > timeToIncident && step > (extinguishingDuration + timeToIncident)) {
+				currentAct = "Fire put down";
+				finished = true;
+			}
+//counter to determine current sub street
+			if (step < timePerRoute.get(timePerRoute.size() - 1)) {
+				counter = 0;
+				while (counter < timePerRoute.size()) {
+					if (step < timePerRoute.get(counter)) {
+						break;
+					}
+					counter++;
+
+				}
+
+			}
+			String missionDuration = "";
+			// if mission finished display duration
+
+			if (finished) {
+
+				missionDuration = Integer.toString((int) (extinguishingDuration + timeToIncident)) + " minutes";
+			}
+			// display report
+
+			System.out.printf("%10s%10s%28s%30s%14s%20s%21s%26s%22s", truckType, tripNum,
+					route.getRoute().get(counter).getMainName(), route.getRoute().get(counter).getName(),
+					currentTime.getCurrentTime(), currentAct, finished, fireType, missionDuration);
+			System.out.println();
+		}
+		// add step time to current time
+		currentTime.addTime(0, 4);
+
+	}
 
 	@Override
 
