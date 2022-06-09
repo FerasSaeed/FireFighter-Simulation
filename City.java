@@ -33,134 +33,33 @@ public class City {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-//
-		//
-		   // generate map for the city, save all subStreets in the arraylist above
-			String roadName[] = {"Madina road"
-					,"Madina road"
-					,"Madina road"
-					,"Madina road"
-					,"Madina road"
-					,"Madina road"
-					,"Madina road"
-					,"Madina road"
-					,"Madina road"
-					,"Madina road"
-					,"Prince Sultan Street"
-					,"King AbdulAziz"
-					,"King AbdulAziz"
-					,"Assalam"
-					,"Assalam"
-					,"Bin Baz"
-					,"Palestine"
-					,"Palestine"
-					,"Palestine"
-					,"Palestine"
-					,"Prince Mohammed"
-					,"Prince Mohammed"
-					,"Prince Mohammed"
-					,"Prince Mohammed"
-					,"Prince Mohammed"
-					,"Hira"
-					,"Hira"
-					,"Hira"
-					,"Nouzha Street"
-					,"Nouzha Street"
-					,"Nouzha Street"
-					,"Prince Majed"
-					,"Prince Majed"
-					,"Prince Majed"
-					,"Prince Majed"
-					,"Sixty Street"
-					,"Sixty Street"
-					,"Sixty Street"	};
-			String SubRoadName[] = {"Assalam_MadinaA"
-					,"MadinaA_Nouzha"
-					,"Nouzha_Hira"
-					,"Hira_BinBaz"
-					,"BinBaz_PrinceMohammed"
-					,"PrinceMohammed_Palestine"
-					,"Assalam_Nouzha"
-					,"Nouzha_Hira"
-					,"Hira_PrinceMohammed"
-					,"PrinceMohammed_Palestine"
-					,"Assalam_PrinceMohammed2"
-					,"Assalam_PrinceMohammed"
-					,"PrinceMohammed_Palestine"
-					,"PrinceSultan_Madina"
-					,"PrinceSultan_KingAbdulAziz"
-					,"Madina_PrinceMajed"
-					,"PrinceMajed_Madina"
-					,"PrinceMajed_Setten"
-					,"Setten_Madina"
-					,"Madina_KingAbdulAziz"
-					,"PrinceMajed_Madina"
-					,"PrinceMajed_Setten"
-					,"Setten_Madina"
-					,"Madina_PrinceSultan"
-					,"PrinceSultan_KingAbdulAziz"
-					,"PrinceMajed_Madina"
-					,"PrinceMajed_Setten"
-					,"Setten_Madina"
-					,"PrinceMajed_Madina"
-					,"PrinceMajed_Setten"
-					,"Setten_Madina"
-					,"Nouzha_Hira"
-					,"Hira_BinBaz"
-					,"BinBaz_PrinceMohammed"
-					,"PrinceMohammed_Palestine"
-					,"Nouzha_Hira"
-					,"Hira_PrinceMohammed"
-					,"PrinceMohammed_Palestine"
-			};
-			int roadLength[] = {15,11,2,2,5,3,5,2,7,3,
-					13,14,5,2,2,4,4,2,2,2,4,2,2,3,1,3,
-					2,2,3,2,1,2,2,4,3,2,7,3};
-		for (int i = 0; i < roadName.length ; i++)
-		{
-			subStreets.add(new SubStreet(roadName[i],
-					SubRoadName[i], roadLength[i]));
-			
-		}
-		
-		subStreets.get(0).getAdjSub().addAll(Arrays.asList(subStreets.get(1),subStreets.get(13),subStreets.get(6) ));
-                subStreets.get(1).getAdjSub().addAll(Arrays.asList(subStreets.get(0),subStreets.get(2),subStreets.get(28) ));
-                subStreets.get(2).getAdjSub().addAll(Arrays.asList(subStreets.get(1),subStreets.get(3),subStreets.get(25),subStreets.get(28) ));
-                subStreets.get(3).getAdjSub().addAll(Arrays.asList(subStreets.get(2),subStreets.get(4),subStreets.get(15),subStreets.get(25) ));
-                subStreets.get(4).getAdjSub().addAll(Arrays.asList(subStreets.get(3),subStreets.get(5),subStreets.get(15),subStreets.get(20) ));
-                subStreets.get(5).getAdjSub().addAll(Arrays.asList(subStreets.get(4),subStreets.get(16),subStreets.get(20) ));
-                subStreets.get(6).getAdjSub().addAll(Arrays.asList(subStreets.get(0),subStreets.get(7),subStreets.get(13),subStreets.get(30) ));
-                subStreets.get(7).getAdjSub().addAll(Arrays.asList(subStreets.get(6),subStreets.get(8),subStreets.get(27),subStreets.get(30) ));
-                subStreets.get(8).getAdjSub().addAll(Arrays.asList(subStreets.get(7),subStreets.get(9),subStreets.get(27),subStreets.get(23),subStreets.get(22) ));
-                subStreets.get(9).getAdjSub().addAll(Arrays.asList(subStreets.get(8),subStreets.get(18),subStreets.get(19),subStreets.get(22),subStreets.get(23) ));
-                subStreets.get(10).getAdjSub().addAll(Arrays.asList(subStreets.get(13),subStreets.get(14),subStreets.get(23),subStreets.get(24) ));
-                subStreets.get(11).getAdjSub().addAll(Arrays.asList(subStreets.get(14),subStreets.get(24),subStreets.get(12) ));
-                subStreets.get(12).getAdjSub().addAll(Arrays.asList(subStreets.get(11),subStreets.get(24),subStreets.get(19) ));
-                subStreets.get(13).getAdjSub().addAll(Arrays.asList(subStreets.get(0),subStreets.get(6),subStreets.get(10),subStreets.get(14) ));
-                subStreets.get(14).getAdjSub().addAll(Arrays.asList(subStreets.get(10),subStreets.get(13),subStreets.get(11) ));
-                subStreets.get(15).getAdjSub().addAll(Arrays.asList(subStreets.get(3),subStreets.get(4),subStreets.get(32),subStreets.get(33) ));
-                subStreets.get(16).getAdjSub().addAll(Arrays.asList(subStreets.get(9),subStreets.get(17),subStreets.get(34) ));
-                subStreets.get(17).getAdjSub().addAll(Arrays.asList(subStreets.get(16),subStreets.get(18),subStreets.get(34),subStreets.get(37) ));
-                subStreets.get(18).getAdjSub().addAll(Arrays.asList(subStreets.get(19),subStreets.get(17),subStreets.get(9),subStreets.get(37) ));
-                subStreets.get(19).getAdjSub().addAll(Arrays.asList(subStreets.get(18),subStreets.get(9),subStreets.get(12) ));
-                subStreets.get(20).getAdjSub().addAll(Arrays.asList(subStreets.get(4),subStreets.get(5),subStreets.get(33),subStreets.get(34),subStreets.get(21) ));
-                subStreets.get(21).getAdjSub().addAll(Arrays.asList(subStreets.get(20),subStreets.get(33),subStreets.get(34),subStreets.get(22),subStreets.get(36),subStreets.get(37) ));
-                subStreets.get(22).getAdjSub().addAll(Arrays.asList(subStreets.get(21),subStreets.get(23),subStreets.get(36),subStreets.get(37),subStreets.get(8),subStreets.get(9) ));
-                subStreets.get(23).getAdjSub().addAll(Arrays.asList(subStreets.get(22),subStreets.get(24),subStreets.get(8),subStreets.get(9),subStreets.get(10) ));
-                subStreets.get(24).getAdjSub().addAll(Arrays.asList(subStreets.get(23),subStreets.get(10),subStreets.get(11),subStreets.get(12) ));
-                subStreets.get(25).getAdjSub().addAll(Arrays.asList(subStreets.get(2),subStreets.get(3),subStreets.get(26),subStreets.get(31),subStreets.get(32) ));
-                subStreets.get(26).getAdjSub().addAll(Arrays.asList(subStreets.get(25),subStreets.get(27),subStreets.get(31),subStreets.get(32),subStreets.get(35),subStreets.get(36) ));
-                subStreets.get(27).getAdjSub().addAll(Arrays.asList(subStreets.get(26),subStreets.get(35),subStreets.get(36),subStreets.get(7),subStreets.get(8) ));
-                subStreets.get(28).getAdjSub().addAll(Arrays.asList(subStreets.get(1),subStreets.get(2),subStreets.get(29),subStreets.get(31) ));
-                subStreets.get(29).getAdjSub().addAll(Arrays.asList(subStreets.get(28),subStreets.get(30),subStreets.get(31),subStreets.get(35) ));
-                subStreets.get(30).getAdjSub().addAll(Arrays.asList(subStreets.get(6),subStreets.get(7),subStreets.get(29),subStreets.get(35) ));
-                subStreets.get(31).getAdjSub().addAll(Arrays.asList(subStreets.get(25),subStreets.get(26),subStreets.get(28),subStreets.get(29),subStreets.get(32) ));
-                subStreets.get(32).getAdjSub().addAll(Arrays.asList(subStreets.get(31),subStreets.get(33),subStreets.get(25),subStreets.get(26),subStreets.get(15) ));
-                subStreets.get(33).getAdjSub().addAll(Arrays.asList(subStreets.get(32),subStreets.get(34),subStreets.get(15),subStreets.get(20),subStreets.get(21) ));
-                subStreets.get(34).getAdjSub().addAll(Arrays.asList(subStreets.get(16),subStreets.get(17),subStreets.get(33),subStreets.get(20),subStreets.get(21) ));
-                subStreets.get(35).getAdjSub().addAll(Arrays.asList(subStreets.get(29),subStreets.get(30),subStreets.get(36),subStreets.get(26),subStreets.get(27) ));
-                subStreets.get(36).getAdjSub().addAll(Arrays.asList(subStreets.get(35),subStreets.get(37),subStreets.get(26),subStreets.get(27),subStreets.get(21),subStreets.get(22) ));
-                subStreets.get(37).getAdjSub().addAll(Arrays.asList(subStreets.get(36),subStreets.get(21),subStreets.get(22),subStreets.get(17),subStreets.get(18) ));
+
+			CityMap.generateMap();
+
+			int incidentNum = 0;
+			System.out.print("Enter the Number of incidents: ");
+
+			// loop to check until the user enters a valid value
+			while (true) {
+				try {
+					incidentNum = input.nextInt();
+					if (incidentNum < 1) {
+
+						System.out.print("Values must be positive! Enter the number of incidents:");
+						continue;
+					}
+					if (incidentNum % 1 == 0) {
+						break;
+					}
+				} catch (InputMismatchException e) {
+
+					System.out.print("Invalid input! Enter the number of incidents: ");
+					input.next();
+
+				}
+			}
+			System.out.println();
+			int phase = 0;
 
 
         // Loop1: for i from 1 to a random number (max is 20) generate incidents objects
@@ -271,4 +170,61 @@ System.out.println("\n\n Percentage of missions lateness (more than 45 minutes u
 	
 	
 	}
+
+
+
+private class CityMap {
+		// all roads names
+		private static String[] roadName;
+		// all sub roads names
+		private static String SubRoadName[];
+
+		public static void generateMap() {
+
+			// generate map for the city, save all subStreets in the arraylist above
+			roadName = new String[] { "Madina road", "Madina road", "Madina road", "Madina road", "Madina road",
+					"Madina road", "Madina road", "Madina road", "Madina road", "Madina road", "Prince Sultan Street",
+					"King AbdulAziz", "King AbdulAziz", "Assalam", "Assalam", "Bin Baz", "Palestine", "Palestine",
+					"Palestine", "Palestine", "Prince Mohammed", "Prince Mohammed", "Prince Mohammed",
+					"Prince Mohammed", "Prince Mohammed", "Hira", "Hira", "Hira", "Nouzha Street", "Nouzha Street",
+					"Nouzha Street", "Prince Majed", "Prince Majed", "Prince Majed", "Prince Majed", "Sixty Street",
+					"Sixty Street", "Sixty Street" };
+			SubRoadName = new String[] { "Assalam_MadinaA", "MadinaA_Nouzha", "Nouzha_Hira", "Hira_BinBaz",
+					"BinBaz_PrinceMohammed", "PrinceMohammed_Palestine", "Assalam_Nouzha", "Nouzha_Hira",
+					"Hira_PrinceMohammed", "PrinceMohammed_Palestine", "Assalam_PrinceMohammed2",
+					"Assalam_PrinceMohammed", "PrinceMohammed_Palestine", "PrinceSultan_Madina",
+					"PrinceSultan_KingAbdulAziz", "Madina_PrinceMajed", "PrinceMajed_Madina", "PrinceMajed_Setten",
+					"Setten_Madina", "Madina_KingAbdulAziz", "PrinceMajed_Madina", "PrinceMajed_Setten",
+					"Setten_Madina", "Madina_PrinceSultan", "PrinceSultan_KingAbdulAziz", "PrinceMajed_Madina",
+					"PrinceMajed_Setten", "Setten_Madina", "PrinceMajed_Madina", "PrinceMajed_Setten", "Setten_Madina",
+					"Nouzha_Hira", "Hira_BinBaz", "BinBaz_PrinceMohammed", "PrinceMohammed_Palestine", "Nouzha_Hira",
+					"Hira_PrinceMohammed", "PrinceMohammed_Palestine" };
+			// length for every substreet
+			int roadLength[] = { 15, 11, 2, 2, 5, 3, 5, 2, 7, 3, 13, 14, 5, 2, 2, 4, 4, 2, 2, 2, 4, 2, 2, 3, 1, 3, 2, 2,
+					3, 2, 1, 2, 2, 4, 3, 2, 7, 3 };
+			for (int i = 0; i < roadName.length; i++) {
+				subStreets.add(new SubStreet(roadName[i], SubRoadName[i], roadLength[i]));
+
+			}
+		
+			
+		//-----------------------------------------------------------------------------
+			
+			Khaled
+		
+	      //-----------------------------------------------------------------------------
+	      //-----------------------------------------------------------------------------
+			
+			Mohammed
+		
+	      //-----------------------------------------------------------------------------
+	      //-----------------------------------------------------------------------------
+			
+			Abdulqader
+		
+	      //-----------------------------------------------------------------------------
+
+		}
+	}
+
 }
