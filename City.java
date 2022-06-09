@@ -341,7 +341,79 @@ private class CityMap {
 	      //-----------------------------------------------------------------------------
 	      //-----------------------------------------------------------------------------
 			
-			Mohammed
+		        SubStreet sub21 = subStreets.get(21);
+			ArrayList<SubStreet> subb21 = sub21.getAdjSub();
+
+			subb21.add(subStreets.get(20));
+			subb21.add(subStreets.get(33));
+			subb21.add(subStreets.get(34));
+			subb21.add(subStreets.get(36));
+			subb21.add(subStreets.get(22));
+			subb21.add(subStreets.get(37));
+
+			SubStreet sub22 = subStreets.get(22);
+			ArrayList<SubStreet> subb22 = sub22.getAdjSub();
+
+			subb22.add(subStreets.get(21));
+			subb22.add(subStreets.get(23));
+			subb22.add(subStreets.get(8));
+			subb22.add(subStreets.get(36));
+			subb22.add(subStreets.get(9));
+			subb22.add(subStreets.get(37));
+
+			SubStreet sub23 = subStreets.get(23);
+			ArrayList<SubStreet> subb23 = sub23.getAdjSub();
+
+			subb23.add(subStreets.get(22));
+			subb23.add(subStreets.get(24));
+			subb23.add(subStreets.get(8));
+			subb23.add(subStreets.get(9));
+			subb23.add(subStreets.get(10));
+
+			SubStreet sub24 = subStreets.get(24);
+			ArrayList<SubStreet> subb24 = sub24.getAdjSub();
+
+			subb24.add(subStreets.get(23));
+			subb24.add(subStreets.get(10));
+			subb24.add(subStreets.get(11));
+			subb24.add(subStreets.get(12));
+
+			SubStreet sub25 = subStreets.get(25);
+			ArrayList<SubStreet> subb25 = sub25.getAdjSub();
+
+			subb25.add(subStreets.get(2));
+			subb25.add(subStreets.get(3));
+			subb25.add(subStreets.get(31));
+			subb25.add(subStreets.get(26));
+			subb25.add(subStreets.get(32));
+
+			SubStreet sub26 = subStreets.get(26);
+			ArrayList<SubStreet> subb26 = sub26.getAdjSub();
+
+			subb26.add(subStreets.get(25));
+			subb26.add(subStreets.get(27));
+			subb26.add(subStreets.get(31));
+			subb26.add(subStreets.get(32));
+			subb26.add(subStreets.get(35));
+			subb26.add(subStreets.get(36));
+
+			SubStreet sub27 = subStreets.get(27);
+			ArrayList<SubStreet> subb27 = sub27.getAdjSub();
+
+			subb27.add(subStreets.get(26));
+			subb27.add(subStreets.get(35));
+			subb27.add(subStreets.get(36));
+			subb27.add(subStreets.get(7));
+			subb27.add(subStreets.get(8));
+
+			SubStreet sub28 = subStreets.get(28);
+			ArrayList<SubStreet> subb28 = sub28.getAdjSub();
+
+			subb28.add(subStreets.get(1));
+			subb28.add(subStreets.get(2));
+			subb28.add(subStreets.get(29));
+			subb28.add(subStreets.get(31));
+
 		
 	      //-----------------------------------------------------------------------------
 	      //-----------------------------------------------------------------------------
