@@ -210,7 +210,133 @@ private class CityMap {
 			
 		//-----------------------------------------------------------------------------
 			
-			Khaled
+			SubStreet sub5 = subStreets.get(5);
+
+			ArrayList<SubStreet> subb5 = sub5.getAdjSub();
+
+			subb5.add(subStreets.get(4));
+			subb5.add(subStreets.get(16));
+			subb5.add(subStreets.get(20));
+			SubStreet sub6 = subStreets.get(6);
+
+			ArrayList<SubStreet> subb6 = sub6.getAdjSub();
+
+			subb6.add(subStreets.get(0));
+			subb6.add(subStreets.get(7));
+			subb6.add(subStreets.get(13));
+			subb6.add(subStreets.get(30));
+			SubStreet sub7 = subStreets.get(7);
+
+			ArrayList<SubStreet> subb7 = sub7.getAdjSub();
+
+			subb7.add(subStreets.get(6));
+			subb7.add(subStreets.get(8));
+			subb7.add(subStreets.get(27));
+			subb7.add(subStreets.get(30));
+
+			SubStreet sub8 = subStreets.get(8);
+			ArrayList<SubStreet> subb8 = sub8.getAdjSub();
+
+			subb8.add(subStreets.get(7));
+			subb8.add(subStreets.get(9));
+			subb8.add(subStreets.get(27));
+			subb8.add(subStreets.get(23));
+			subb8.add(subStreets.get(22));
+
+			SubStreet sub9 = subStreets.get(9);
+			ArrayList<SubStreet> subb9 = sub9.getAdjSub();
+
+			subb9.add(subStreets.get(8));
+			subb9.add(subStreets.get(18));
+			subb9.add(subStreets.get(19));
+			subb9.add(subStreets.get(23));
+			subb9.add(subStreets.get(22));
+
+			SubStreet sub10 = subStreets.get(10);
+			ArrayList<SubStreet> subb10 = sub10.getAdjSub();
+
+			subb10.add(subStreets.get(13));
+			subb10.add(subStreets.get(14));
+			subb10.add(subStreets.get(24));
+			subb10.add(subStreets.get(23));
+
+			SubStreet sub11 = subStreets.get(11);
+			ArrayList<SubStreet> subb11 = sub11.getAdjSub();
+
+			subb11.add(subStreets.get(14));
+			subb11.add(subStreets.get(24));
+			subb11.add(subStreets.get(12));
+
+			SubStreet sub12 = subStreets.get(12);
+			ArrayList<SubStreet> subb12 = sub12.getAdjSub();
+
+			subb12.add(subStreets.get(11));
+			subb12.add(subStreets.get(24));
+			subb12.add(subStreets.get(19));
+
+			SubStreet sub13 = subStreets.get(13);
+			ArrayList<SubStreet> subb13 = sub13.getAdjSub();
+
+			subb13.add(subStreets.get(0));
+			subb13.add(subStreets.get(6));
+			subb13.add(subStreets.get(10));
+			subb13.add(subStreets.get(14));
+
+			SubStreet sub14 = subStreets.get(14);
+			ArrayList<SubStreet> subb14 = sub14.getAdjSub();
+
+			subb14.add(subStreets.get(10));
+			subb14.add(subStreets.get(13));
+			subb14.add(subStreets.get(11));
+
+			SubStreet sub15 = subStreets.get(15);
+			ArrayList<SubStreet> subb15 = sub15.getAdjSub();
+
+			subb15.add(subStreets.get(3));
+			subb15.add(subStreets.get(4));
+			subb15.add(subStreets.get(32));
+			subb15.add(subStreets.get(33));
+
+			SubStreet sub16 = subStreets.get(16);
+			ArrayList<SubStreet> subb16 = sub16.getAdjSub();
+
+			subb16.add(subStreets.get(17));
+			subb16.add(subStreets.get(9));
+			subb16.add(subStreets.get(34));
+
+			SubStreet sub17 = subStreets.get(17);
+			ArrayList<SubStreet> subb17 = sub17.getAdjSub();
+
+			subb17.add(subStreets.get(16));
+			subb17.add(subStreets.get(18));
+			subb17.add(subStreets.get(34));
+			subb17.add(subStreets.get(37));
+
+			SubStreet sub18 = subStreets.get(18);
+			ArrayList<SubStreet> subb18 = sub18.getAdjSub();
+
+			subb18.add(subStreets.get(17));
+			subb18.add(subStreets.get(19));
+			subb18.add(subStreets.get(9));
+			subb18.add(subStreets.get(37));
+
+			SubStreet sub19 = subStreets.get(19);
+			ArrayList<SubStreet> subb19 = sub19.getAdjSub();
+
+			subb19.add(subStreets.get(18));
+			subb19.add(subStreets.get(9));
+			subb19.add(subStreets.get(12));
+
+			SubStreet sub20 = subStreets.get(20);
+			ArrayList<SubStreet> subb20 = sub20.getAdjSub();
+
+			subb20.add(subStreets.get(5));
+			subb20.add(subStreets.get(4));
+			subb20.add(subStreets.get(34));
+			subb20.add(subStreets.get(33));
+			subb20.add(subStreets.get(21));
+
+
 		
 	      //-----------------------------------------------------------------------------
 	      //-----------------------------------------------------------------------------
