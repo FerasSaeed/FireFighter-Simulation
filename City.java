@@ -208,8 +208,45 @@ private class CityMap {
 			}
 		
 			
-		//-----------------------------------------------------------------------------
-			
+// generate map by adding adjacent streets
+			SubStreet sub0 = subStreets.get(0);
+			ArrayList<SubStreet> subb0 = sub0.getAdjSub();
+
+			subb0.add(subStreets.get(1));
+			subb0.add(subStreets.get(13));
+			subb0.add(subStreets.get(6));
+			SubStreet sub1 = subStreets.get(1);
+
+			ArrayList<SubStreet> subb1 = sub1.getAdjSub();
+
+			subb1.add(subStreets.get(0));
+			subb1.add(subStreets.get(2));
+			subb1.add(subStreets.get(28));
+
+			SubStreet sub2 = subStreets.get(2);
+
+			ArrayList<SubStreet> subb2 = sub2.getAdjSub();
+
+			subb2.add(subStreets.get(1));
+			subb2.add(subStreets.get(3));
+			subb2.add(subStreets.get(25));
+			subb2.add(subStreets.get(28));
+			SubStreet sub3 = subStreets.get(3);
+
+			ArrayList<SubStreet> subb3 = sub3.getAdjSub();
+
+			subb3.add(subStreets.get(2));
+			subb3.add(subStreets.get(4));
+			subb3.add(subStreets.get(25));
+			subb3.add(subStreets.get(15));
+			SubStreet sub4 = subStreets.get(4);
+
+			ArrayList<SubStreet> subb4 = sub4.getAdjSub();
+
+			subb4.add(subStreets.get(3));
+			subb4.add(subStreets.get(5));
+			subb4.add(subStreets.get(15));
+			subb4.add(subStreets.get(20));			
 			SubStreet sub5 = subStreets.get(5);
 
 			ArrayList<SubStreet> subb5 = sub5.getAdjSub();
@@ -338,8 +375,7 @@ private class CityMap {
 
 
 		
-	      //-----------------------------------------------------------------------------
-	      //-----------------------------------------------------------------------------
+	      
 			
 		        SubStreet sub21 = subStreets.get(21);
 			ArrayList<SubStreet> subb21 = sub21.getAdjSub();
@@ -415,8 +451,6 @@ private class CityMap {
 			subb28.add(subStreets.get(31));
 
 		
-	      //-----------------------------------------------------------------------------
-	      //-----------------------------------------------------------------------------
 			
 ​SubStreet sub29 = subStreets.get(29);
 ​​​ArrayList<SubStreet> subb29 = sub29.getAdjSub();
